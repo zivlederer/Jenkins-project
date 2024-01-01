@@ -56,7 +56,7 @@ pipeline {
                     git config user.email "lederer.ziv@gmail.com"
                     git config user.name "ziv L"
                     BUILD_NUMBER=${BUILD_NUMBER}
-                    sed "s/{{TAG}}/1/g" java-maven-sonar-argocd-helm-k8s/spring-boot-app-manifests/deployment-template.yaml > java-maven-sonar-argocd-helm-k8s/spring-boot-app-manifests/deployment.yml
+                    sed "s/{{TAG}}/${BUILD_NUMBER}/g" java-maven-sonar-argocd-helm-k8s/spring-boot-app-manifests/deployment-template.yaml > java-maven-sonar-argocd-helm-k8s/spring-boot-app-manifests/deployment.yml
                     # for debugging:
                     # tail -f /dev/null
                     git add java-maven-sonar-argocd-helm-k8s/spring-boot-app-manifests/deployment.yml
