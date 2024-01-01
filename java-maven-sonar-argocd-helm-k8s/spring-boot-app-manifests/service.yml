@@ -11,4 +11,4 @@ spec:
     protocol: TCP
   selector:
     app: spring-boot-app
-  nodePort: 32767
+  nodePort: 32000
